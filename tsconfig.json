@@ -34,6 +34,12 @@
     },
     {
       "path": "./projects/yudu-component-kit/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/testbed/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/testbed/tsconfig.spec.json"
     }
   ]
 }
