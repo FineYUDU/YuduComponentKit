@@ -6,7 +6,14 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "lint": "ng lint",
+    "test": "ng test",
+    "yudu:testbed": "ng serve testbed",
+    "yudu:build": "ng build yudu-component-kit",
+    "yudu:lint": "ng lint yudu-component-kit",
+    "yudu:test": "ng test yudu-component-kit --watch=false --progress=false --browsers=ChromeHeadless",
+    "yudu:publish": "npm run yudu:build && npm publish dist/yudu-component-kit/ --access public"
+
   },
   "prettier": {
     "printWidth": 100,
@@ -36,6 +43,8 @@
     "@angular/cli": "^20.3.0",
     "@angular/compiler-cli": "^20.3.0",
     "@types/jasmine": "~5.1.0",
+    "angular-eslint": "20.5.0",
+    "eslint": "^9.38.0",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -43,6 +52,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^20.3.0",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.2",
+    "typescript-eslint": "8.46.1"
   }
 }

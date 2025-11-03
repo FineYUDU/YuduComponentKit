@@ -1,12 +1,17 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+import { YdButton, YdBtnSize, YdBtnStyle } from 'yudu-component-kit';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    YdButton
+],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('testbed');
+  public btnSize = signal<YdBtnSize>(YdBtnSize.normal);
+  public btnStyle = signal<YdBtnStyle>(YdBtnStyle.primary);
 }

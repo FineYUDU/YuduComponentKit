@@ -1,0 +1,16 @@
+<button
+    #buttonContainer
+    [type]="type()"
+    class="yd-btn"
+    [class.yd-btn__primary]="buttonStyle() === 'primary'"
+    [class.yd-btn__secondary]="buttonStyle() === 'secondary'"
+    [class.yd-btn__tertiary]="buttonStyle() === 'tertiary'"
+    [class.w--100]="fullSize()"
+    [ngClass]="{
+        'small': size() === 'small',
+        'normal': size() === 'normal',
+        'large': size() === 'large',
+    }"
+    >
+    <ng-content></ng-content>
+</button>
