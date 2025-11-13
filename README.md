@@ -51,6 +51,26 @@ export class AppComponent {
 
 Important: if you don’t inject the service, the theme classes won’t be applied and the global styles may not look as expected.
 
+## ✍🏾 Register styles
+YuduComponentKit ships a design-system stylesheet with tokens (CSS variables), base rules, and theme selectors. You must include it in your app.
+```ts
+{
+  "projects": {
+    "tu-app": {
+      "architect": {
+        "build": {
+          "options": {
+            "styles": [
+              "src/styles.css",
+              "node_modules/yudu-component-kit/src/lib/styles/index.design-system.scss"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+```
 ---
 <p align="center">
 Made with ❤️ by "Fine Yudu"
